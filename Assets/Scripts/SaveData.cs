@@ -5,6 +5,6 @@
 public class SaveData
 {
     public float[] position;
-    public float health;
+    public int health;
     public int coins;
 }

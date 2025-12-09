@@ -16,9 +16,11 @@ public class PlayerSave : MonoBehaviour
             Save();
         }
 
-        if (Input.GetKeyDown(KeyCode.L)) {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
             Load();
         }
+    }
 
         public void Save()
     {
@@ -37,10 +39,17 @@ public class PlayerSave : MonoBehaviour
     }
 
     public void Load()
-        {
+    {
         SaveData data = SaveSystem.Load();
-        if (data != null) {
+        if (data == null) {
             Debug.LogWarning("No save data found");
             return;
         }
-}
+
+        health = data.health; //wczytuje zdrowie
+        coins = data.coins;
+        transform.position = new Vector3(
+            data.position[0],
+            data.position[1],
+            data.position[2]);
+    } }

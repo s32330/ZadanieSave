@@ -16,7 +16,7 @@ public class SaveSystem
         //konwertuje dane do formatu JSON
         string json = JsonUtility.ToJson(data);
         //zapisuje JSON do pliku
-        File.WriteAllText(fileName, json);
+        File.WriteAllText(GetFilePath(), json);
         Debug.Log("Game saved to" + GetFilePath());
     }
 
