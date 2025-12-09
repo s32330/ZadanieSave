@@ -4,7 +4,7 @@
 
 public class SaveData
 {
-    public float[] positions;
+    public float[] position;
     public float health;
     public int coins;
 }
